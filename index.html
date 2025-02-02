@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduGuide - Higher Education Help</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading Bar -->
+  <div class="loading" id="loadingBar"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <i class="fas fa-graduation-cap"></i> EduGuide
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link"><i class="fas fa-home"></i> Home</a>
+      <a href="#" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+      <a href="#" class="nav-link"><i class="fas fa-book"></i> Resources</a>
+      <button class="login-btn" onclick="showLoginModal()">
+        <i class="fas fa-user"></i> Login
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>
+      <i class="fas fa-compass"></i>
+      Find Your Perfect Educational Path
+    </h1>
+
+    <!-- Message Container -->
+    <div id="messageContainer"></div>
+
+    <form id="educationForm">
+      <!-- Personal Preferences Section -->
+      <div class="form-section">
+        <h2><i class="fas fa-star"></i> Personal Preferences & Goals</h2>
+        <label for="subjects">
+          <i class="fas fa-books"></i> Areas of Interest
+        </label>
+        <input type="text" id="subjects" name="subjects" 
+               placeholder="e.g., Computer Science, Business, Arts" required>
+
+        <label for="career">
+          <i class="fas fa-briefcase"></i> Career Aspirations
+        </label>
+        <input type="text" id="career" name="career" 
+               placeholder="e.g., Software Engineer, Business Analyst">
+
+        <label for="strengths">
+          <i class="fas fa-chart-line"></i> Academic Strengths
+        </label>
+        <textarea id="strengths" name="strengths" 
+                  placeholder="Describe your academic strengths and achievements"></textarea>
+
+        <label for="learning-style">
+          <i class="fas fa-brain"></i> Preferred Learning Style
+        </label>
+        <select id="learning-style" name="learning-style">
+          <option value="">Select your learning style</option>
+          <option value="hands-on">Hands-on Learning</option>
+          <option value="research">Research-based Learning</option>
+          <option value="theoretical">Theoretical Study</option>
+          <option value="mixed">Mixed Approach</option>
+        </select>
+      </div>
+
+      <!-- Educational Background Section -->
+      <div class="form-section">
+        <h2><i class="fas fa-graduation-cap"></i> Educational Background</h2>
+        <label for="education">Current Education Level</label>
+        <select id="education" name="education" required>
+          <option value="">Select your education level</option>
+          <option value="high-school">High School</option>
+          <option value="associate">Associate Degree</option>
+          <option value="bachelor">Bachelor's Degree</option>
+          <option value="master">Master's Degree</option>
+        </select>
+
+        <label for="gpa">Current GPA</label>
+        <input type="number" id="gpa" name="gpa" 
+               step="0.01" min="0" max="4" 
+               placeholder="Enter your GPA (0.00 - 4.00)" required>
+
+        <label for="tests">Standardized Tests</label>
+        <input type="text" id="tests" name="tests" 
+               placeholder="e.g., SAT: 1400, ACT: 30">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">
+        <i class="fas fa-paper-plane"></i> Submit Application
+      </button>
+    </form>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2><i class="fas fa-user-circle"></i> Login</h2>
+      <form class="login-form">
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p class="text-center">
+          Don't have an account? <a href="#">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
